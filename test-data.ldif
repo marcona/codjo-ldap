@@ -1,0 +1,48 @@
+dn: dc=example,dc=com
+objectClass: top
+objectClass: domain
+dc: example
+
+dn: ou=People,dc=example,dc=com
+objectClass: top
+objectClass: organizationalUnit
+ou: People
+
+dn: ou=Groups,dc=example,dc=com
+objectClass: top
+objectClass: organizationalUnit
+ou: Groups
+
+## SECOND Level hierarchy
+## ADD a single entry under FIRST (people) level
+# this is an ENTRY sequence and is preceded by a BLANK line
+# the ou: Human Resources is the department name
+
+dn: uid=user_dev,ou=people,dc=example,dc=com
+objectclass: inetOrgPerson
+cn: Robert Smith
+cn: Robert J Smith
+cn: bob  smith
+sn: smith
+uid: user_dev
+userpassword: AzhR1OMe
+carlicense: HISCAR 123
+homephone: 555-111-2222
+mail: r.smith@example.com
+mail: rsmith@example.com
+mail: bob.smith@example.com
+description: swell guy
+ou: Human Resources
+
+dn: uid=user_tr,ou=people,dc=example,dc=com
+objectclass: inetOrgPerson
+cn: Robert Smith
+sn: smith
+uid: user_tr
+userpassword: hQOSq4VD
+carlicense: HISCAR 123
+homephone: 555-111-2222
+mail: r.smith@example.com
+mail: rsmith@example.com
+mail: bob.smith@example.com
+description: swell guy
